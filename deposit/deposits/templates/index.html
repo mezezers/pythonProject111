@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposits</title>
+</head>
+<body>
+    <ul>
+        {% for deposit in deposits %}
+            <li>
+            ID: {{ deposit.id }} <br>
+                <a href="/deposit/{{ deposit.id }}">Deposit: <strong>{{ deposit.deposit }}</strong></a></strong><br>
+            Term: {{ deposit.term }}<br>
+            Rate: {{ deposit.rate }}<br>
+            Interest: {{ deposit.interest }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
